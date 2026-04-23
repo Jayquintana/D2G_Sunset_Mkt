@@ -1,0 +1,242 @@
+/* ============================================================
+   layout.css — ticker, nav, info bar, date cards, footer
+   ============================================================ */
+
+/* ── TICKER ── */
+.ticker {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  padding: 7px 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.ticker-inner {
+  display: inline-block;
+  animation: tick 22s linear infinite;
+}
+
+@keyframes tick {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-100%); }
+}
+
+/* ── NAV ── */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 2.5rem;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--white);
+  z-index: 100;
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mid);
+  transition: color 0.2s;
+}
+
+.nav-link:hover { color: var(--black); }
+
+/* ── INFO BAR ── */
+.info-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid var(--border);
+}
+
+.info-cell {
+  padding: 1.4rem 2rem;
+  border-right: 1px solid var(--border);
+}
+
+.info-cell:last-child { border-right: none; }
+
+.info-cell .lbl {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 4px;
+}
+
+.info-cell .val {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: 0.04em;
+}
+
+/* ── DATE CARDS ── */
+.dates-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border);
+}
+
+.date-card {
+  padding: 2.5rem 3rem;
+  border-right: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.date-card:last-child { border-right: none; }
+
+.date-bg {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 10vw, 9rem);
+  color: var(--off);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.date-tag {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 0.5rem;
+}
+
+.date-day {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.date-info {
+  font-size: 10px;
+  color: var(--mid);
+  letter-spacing: 0.08em;
+  line-height: 2;
+}
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--off);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.foot-logo {
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--mid);
+}
+
+.foot-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.foot-link {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border-dark);
+  padding-bottom: 1px;
+  transition: border-color 0.2s;
+}
+
+.foot-link:hover { border-color: var(--black); }
+
+/* ── WHO ARE YOU SECTION ── */
+.who-section {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.who-label {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  letter-spacing: 0.08em;
+  color: var(--mid);
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+}
+
+.who-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 700px;
+}
+
+.who-card {
+  padding: 3rem 2.5rem;
+  border: 1px solid var(--border-dark);
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.2s, background 0.2s;
+  font-family: var(--font-mono);
+}
+
+.who-card:hover {
+  border-color: var(--black);
+  background: var(--off);
+}
+
+.who-card.selected {
+  border-color: var(--black);
+  border-width: 2px;
+  background: var(--off);
+}
+
+.who-card-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  letter-spacing: 0.05em;
+  color: var(--black);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.who-card-sub {
+  font-size: 11px;
+  color: var(--mid);
+  letter-spacing: 0.06em;
+  line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  .who-cards { grid-template-columns: 1fr; }
+  .who-section { min-height: auto; padding: 3.5rem 1.5rem; }
+}

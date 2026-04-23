@@ -1,0 +1,48 @@
+/* ============================================================
+   responsive.css — breakpoints
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .info-bar { grid-template-columns: 1fr 1fr; }
+  .info-cell:nth-child(2) { border-right: none; }
+  .info-cell:nth-child(3) { border-top: 1px solid var(--border); }
+  .info-cell:nth-child(4) { border-top: 1px solid var(--border); border-right: none; }
+
+  .date-picks { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 700px) {
+  /* Nav */
+  nav { padding: 1rem 1.5rem; }
+  .nav-logo { font-size: 11px; }
+
+  /* Hero */
+  .hero-content { padding: 2rem 1.5rem; }
+  .hero-h1 { font-size: clamp(3.5rem, 14vw, 6rem); }
+  .hero-bottom { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+
+  /* Photo strip */
+  .photo-strip { grid-template-columns: repeat(4, 1fr); height: 80px; }
+
+  /* Info + dates */
+  .info-bar { grid-template-columns: 1fr 1fr; }
+  .dates-row { grid-template-columns: 1fr; }
+  .date-card { border-right: none; border-bottom: 1px solid var(--border); }
+
+  /* Form */
+  .form-wrap { grid-template-columns: 1fr; }
+  .form-aside {
+    position: static;
+    height: auto;
+    padding: 2rem 1.5rem;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .form-body { padding: 2rem 1.5rem 4rem; }
+  .two-col { grid-template-columns: 1fr; }
+  .date-picks { grid-template-columns: 1fr 1fr; }
+  .submit-row { flex-direction: column; align-items: flex-start; }
+
+  /* Footer */
+  footer { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+}

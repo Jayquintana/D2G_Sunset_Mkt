@@ -1,0 +1,152 @@
+/* ============================================================
+   hero.css — slideshow, scrim, headline, cta, dots, photo strip
+   ============================================================ */
+
+/* ── HERO WRAPPER ── */
+.hero {
+  position: relative;
+  height: 88vh;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── SLIDESHOW ── */
+.slides {
+  position: absolute;
+  inset: 0;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+}
+
+.slide.active { opacity: 1; }
+
+/* ── SCRIM ── */
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.76) 0%,
+    rgba(0, 0, 0, 0.35) 55%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  z-index: 2;
+}
+
+/* ── CONTENT ── */
+.hero-content {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5rem 3rem;
+}
+
+.hero-tag {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+}
+
+.hero-center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* ── HEADLINE ── */
+.hero-h1 {
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 9vw, 9rem);
+  line-height: 0.88;
+  color: #fff;
+}
+
+.hero-h1 .outline {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.5);
+  color: transparent;
+}
+
+/* ── BOTTOM ROW ── */
+.hero-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.hero-meta {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.1em;
+  line-height: 2.2;
+}
+
+/* ── CTA BUTTON ── */
+.btn-apply {
+  display: inline-block;
+  background: #fff;
+  color: var(--black);
+  font-family: var(--font-display);
+  font-size: 17px;
+  letter-spacing: 0.14em;
+  padding: 13px 40px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 9px 100%, 0 calc(100% - 9px));
+}
+
+.btn-apply:hover { opacity: 0.85; }
+
+/* ── SLIDE DOTS ── */
+.slide-dots {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 7px;
+  z-index: 5;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active { background: #fff; }
+
+/* ── PHOTO STRIP ── */
+.photo-strip {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  height: 110px;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.strip-photo {
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+  border-right: 1px solid var(--border);
+}
+
+.strip-photo:last-child { border-right: none; }
+.strip-photo:hover { filter: grayscale(0%); }

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Death 2 Genres: Sunset Market — Apply</title>
+  <meta name="description" content="Apply as a vendor or artist for Death 2 Genres: Sunset Market — June 13 & July 17, 2025." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/form.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ── TICKER ── -->
+  <div class="ticker">
+    <span class="ticker-inner" aria-hidden="true">
+      DEATH 2 GENRES: SUNSET MARKET &nbsp;&nbsp;✦&nbsp;&nbsp; VENDORS &amp; ARTISTS APPLICATION &nbsp;&nbsp;✦&nbsp;&nbsp; DEATH 2 GENRES: SUNSET MARKET &nbsp;&nbsp;✦&nbsp;&nbsp; VENDORS &amp; ARTISTS APPLICATION &nbsp;&nbsp;✦&nbsp;&nbsp; DEATH 2 GENRES: SUNSET MARKET &nbsp;&nbsp;✦&nbsp;&nbsp; VENDORS &amp; ARTISTS APPLICATION &nbsp;&nbsp;✦&nbsp;&nbsp;
+    </span><span class="ticker-inner" aria-hidden="true">
+      DEATH 2 GENRES: SUNSET MARKET &nbsp;&nbsp;✦&nbsp;&nbsp; VENDORS &amp; ARTISTS APPLICATION &nbsp;&nbsp;✦&nbsp;&nbsp; DEATH 2 GENRES: SUNSET MARKET &nbsp;&nbsp;✦&nbsp;&nbsp; VENDORS &amp; ARTISTS APPLICATION &nbsp;&nbsp;✦&nbsp;&nbsp; DEATH 2 GENRES: SUNSET MARKET &nbsp;&nbsp;✦&nbsp;&nbsp; VENDORS &amp; ARTISTS APPLICATION &nbsp;&nbsp;✦&nbsp;&nbsp;
+    </span>
+  </div>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <div class="nav-logo">DEATH 2 GENRES: SUNSET MARKET</div>
+    <div class="nav-links">
+      <a href="https://death2genres.com" target="_blank" class="nav-link">Website</a>
+      <a href="https://instagram.com/death2genres" target="_blank" class="nav-link">@death2genres</a>
+      <a class="nav-link" style="cursor:pointer;" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply →</a>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="slides">
+      <div class="slide active" style="background-image: url('photos/170A4663.jpg')"></div>
+      <div class="slide"        style="background-image: url('photos/170A4488.jpg')"></div>
+      <div class="slide"        style="background-image: url('photos/170A4413.jpg')"></div>
+      <div class="slide"        style="background-image: url('photos/170A4297.jpg')"></div>
+      <div class="slide"        style="background-image: url('photos/170A4094.jpg')"></div>
+      <div class="slide"        style="background-image: url('photos/170A5031.jpg')"></div>
+      <div class="slide"        style="background-image: url('photos/170A4662.jpg')"></div>
+      <div class="slide"        style="background-image: url('photos/170A4574.jpg')"></div>
+    </div>
+
+    <div class="hero-scrim"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag">Open Call — Vendors &amp; Artists 2026</div>
+
+      <div class="hero-center">
+        <div class="hero-h1">
+          <div>DEATH</div>
+          <div>2</div>
+          <div class="outline">GENRES</div>
+          <div>SUNSET MKT</div>
+        </div>
+      </div>
+
+      <div class="hero-bottom">
+        <div class="hero-meta">
+          JUNE 13 &amp; JULY 17, 2026 &nbsp;·&nbsp; LOCATION TBA<br>
+          VENDING 4PM &nbsp;·&nbsp; LIVE MUSIC 6PM &nbsp;·&nbsp; UNTIL 10PM
+        </div>
+        <button class="btn-apply" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHO ARE YOU ── -->
+  <section class="who-section" id="apply">
+    <div class="who-label">I am applying as a —</div>
+    <div class="who-cards">
+      <button class="who-card" id="who-vendor" onclick="selectType('vendor')">
+        <div class="who-card-title">Vendor</div>
+        <div class="who-card-sub">Market table · Makers · Food &amp; drink · Art · Merch</div>
+      </button>
+      <button class="who-card" id="who-artist" onclick="selectType('artist')">
+        <div class="who-card-title">Music Artist / Band</div>
+        <div class="who-card-sub">Live performance · Any genre · Solo to full band</div>
+      </button>
+    </div>
+  </section>
+
+  <!-- ── FORM ── -->
+  <section class="form-wrap" id="form" style="display:none;">
+
+    <aside class="form-aside">
+      <div>
+        <div class="aside-title" id="aside-title"></div>
+        <div class="aside-steps" id="aside-steps-vendor" style="display:none;">
+          <div class="step on"><div class="snum">1</div>Contact</div>
+          <div class="step on"><div class="snum">2</div>Business</div>
+          <div class="step on"><div class="snum">3</div>Dates &amp; Setup</div>
+        </div>
+        <div class="aside-steps" id="aside-steps-artist" style="display:none;">
+          <div class="step on"><div class="snum">1</div>Contact</div>
+          <div class="step on"><div class="snum">2</div>Your Act</div>
+          <div class="step on"><div class="snum">3</div>Stage &amp; Dates</div>
+        </div>
+      </div>
+      <div class="aside-foot">
+        <a href="mailto:elcapitan@death2genres.com">elcapitan@death2genres.com</a>
+        <div class="aside-socials">
+          <a href="https://instagram.com/death2genres" target="_blank" class="aside-social">Instagram</a>
+          <a href="https://death2genres.com" target="_blank" class="aside-social">Website</a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="form-body">
+
+      <!-- ════ VENDOR FORM ════ -->
+      <div id="vendor-form" style="display:none;">
+        <div id="vendor-form-content">
+
+          <div class="fblock">
+            <div class="fblock-head"><div class="fnum">01</div><div class="ftitle">Contact Info</div></div>
+            <div class="two-col">
+              <div class="field"><label>First Name <span class="req">*</span></label><input type="text" name="v_first_name" id="v-fname" placeholder="Jane" /></div>
+              <div class="field"><label>Last Name <span class="req">*</span></label><input type="text" name="v_last_name" id="v-lname" placeholder="Smith" /></div>
+            </div>
+            <div class="two-col">
+              <div class="field"><label>Email <span class="req">*</span></label><input type="email" name="v_email" id="v-email" placeholder="jane@yourbrand.com" /></div>
+              <div class="field"><label>Phone</label><input type="tel" name="v_phone" placeholder="(303) 555-0100" /></div>
+            </div>
+            <div class="field">
+              <label>Instagram</label>
+              <input type="text" name="v_instagram" placeholder="@yourbrand" />
+              <div class="hint">// We'll tag you in promos</div>
+            </div>
+          </div>
+
+          <div class="fblock">
+            <div class="fblock-head"><div class="fnum">02</div><div class="ftitle">Your Business</div></div>
+            <div class="field"><label>Brand / Business Name <span class="req">*</span></label><input type="text" name="v_business_name" id="v-bizname" placeholder="The Golden Petal Co." /></div>
+            <div class="field">
+              <label>Category <span class="req">*</span></label>
+              <select name="v_category" id="v-category">
+                <option value="">— Select —</option>
+                <option>Handmade crafts &amp; art</option>
+                <option>Jewelry &amp; accessories</option>
+                <option>Clothing &amp; apparel</option>
+                <option>Plants &amp; florals</option>
+                <option>Candles, soaps &amp; wellness</option>
+                <option>Pottery &amp; ceramics</option>
+                <option>Food &amp; beverage</option>
+                <option>Vintage &amp; resale</option>
+                <option>Photography &amp; prints</option>
+                <option>Music / merch</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Tell us about your brand <span class="req">*</span></label>
+              <textarea name="v_description" id="v-description" placeholder="What you sell, your vibe, what makes your booth worth showing up for..."></textarea>
+            </div>
+            <div class="two-col">
+              <div class="field"><label>Website or Portfolio</label><input type="url" name="v_website" placeholder="https://" /></div>
+              <div class="field">
+                <label>Market Experience</label>
+                <select name="v_experience">
+                  <option value="">— Select —</option>
+                  <option>Yes — regularly</option>
+                  <option>Yes — a few times</option>
+                  <option>First time</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="fblock">
+            <div class="fblock-head"><div class="fnum">03</div><div class="ftitle">Dates &amp; Setup</div></div>
+            <div class="field">
+              <label>Which date(s)? <span class="req">*</span></label>
+              <div class="date-picks" id="v-date-picks">
+                <div class="dp"><input type="radio" name="v_date" id="vd1" value="June 13, 2026" /><label for="vd1"><span class="big">June 13</span><span class="small">Friday · Show 01</span></label></div>
+                <div class="dp"><input type="radio" name="v_date" id="vd2" value="July 17, 2026" /><label for="vd2"><span class="big">July 17</span><span class="small">Thursday · Show 02</span></label></div>
+              </div>
+            </div>
+            <div class="two-col" style="margin-top:1.2rem;">
+              <div class="field">
+                <label>Need Electricity?</label>
+                <select name="v_power">
+                  <option>No</option>
+                  <option>Yes — lighting only</option>
+                  <option>Yes — equipment</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>How big is your setup?</label>
+                <select name="v_setup_size">
+                  <option value="">— Select —</option>
+                  <option>Small (single table)</option>
+                  <option>Medium (table + rack / display)</option>
+                  <option>Large (full tent / multiple tables)</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field" style="margin-top:0.8rem;">
+              <label>Anything else?</label>
+              <textarea name="v_notes" placeholder="Setup needs, questions, etc."></textarea>
+            </div>
+          </div>
+
+          <div class="submit-row">
+            <button class="btn-submit" id="v-submit-btn" type="button" onclick="submitVendor()">Send It →</button>
+          </div>
+
+        </div>
+        <div class="success" id="v-success">
+          <div class="success-check">✓</div>
+          <div class="success-msg">You're on our radar.</div>
+          <div class="success-sub">We'll be in touch at the email you provided. Follow <a href="https://instagram.com/death2genres" target="_blank">@death2genres</a> for updates.</div>
+        </div>
+      </div>
+
+      <!-- ════ ARTIST FORM ════ -->
+      <div id="artist-form" style="display:none;">
+        <div id="artist-form-content">
+
+          <div class="fblock">
+            <div class="fblock-head"><div class="fnum">01</div><div class="ftitle">Contact Info</div></div>
+            <div class="two-col">
+              <div class="field"><label>First Name <span class="req">*</span></label><input type="text" name="a_first_name" id="a-fname" placeholder="Jane" /></div>
+              <div class="field"><label>Last Name <span class="req">*</span></label><input type="text" name="a_last_name" id="a-lname" placeholder="Smith" /></div>
+            </div>
+            <div class="two-col">
+              <div class="field"><label>Email <span class="req">*</span></label><input type="email" name="a_email" id="a-email" placeholder="jane@yourband.com" /></div>
+              <div class="field"><label>Phone</label><input type="tel" name="a_phone" placeholder="(303) 555-0100" /></div>
+            </div>
+            <div class="two-col">
+              <div class="field">
+                <label>Instagram <span class="req">*</span></label>
+                <input type="text" name="a_instagram" id="a-instagram" placeholder="@yourband" />
+                <div class="hint">// We'll tag you in show promos</div>
+              </div>
+              <div class="field"><label>Other Socials</label><input type="text" name="a_socials" placeholder="TikTok, Twitter, Facebook..." /></div>
+            </div>
+          </div>
+
+          <div class="fblock">
+            <div class="fblock-head"><div class="fnum">02</div><div class="ftitle">Your Act</div></div>
+            <div class="two-col">
+              <div class="field"><label>Artist / Band Name <span class="req">*</span></label><input type="text" name="a_artist_name" id="a-artist-name" placeholder="The Midnight Collective" /></div>
+              <div class="field">
+                <label>Act Size <span class="req">*</span></label>
+                <select name="a_act_size" id="a-act-size">
+                  <option value="">— Select —</option>
+                  <option>Solo</option>
+                  <option>Group</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label>How would YOU describe your sound? <span class="req">*</span></label>
+              <textarea name="a_sound" id="a-sound" placeholder="Skip the genre labels — tell us what your music actually feels like, who it's for, what kind of energy you bring to a room..."></textarea>
+            </div>
+            <div class="field">
+              <label>Music Links <span class="req">*</span></label>
+              <textarea name="a_links" id="a-links" placeholder="Spotify, SoundCloud, Bandcamp, YouTube, etc. Drop as many as you have — we want to hear you." style="min-height:70px;"></textarea>
+              <div class="hint">// EPK link welcome too</div>
+            </div>
+            <div class="field">
+              <label>Show Examples</label>
+              <textarea name="a_show_examples" placeholder="Links to live footage, past show videos, or describe a show that represents what we'd be getting." style="min-height:70px;"></textarea>
+              <div class="hint">// Not required but it really helps</div>
+            </div>
+            <div class="field">
+              <label>Instruments &amp; Equipment You're Bringing <span class="req">*</span></label>
+              <textarea name="a_equipment" id="a-equipment" placeholder="Guitars, bass, drums, keys, DJ setup, PA, amps, pedals — list everything you plan to bring." style="min-height:70px;"></textarea>
+            </div>
+          </div>
+
+          <div class="fblock">
+            <div class="fblock-head"><div class="fnum">03</div><div class="ftitle">Stage &amp; Dates</div></div>
+            <div class="field">
+              <label>Which date(s) work for you? <span class="req">*</span></label>
+              <div class="date-picks" id="a-date-picks">
+                <div class="dp"><input type="radio" name="a_date" id="ad1" value="June 13, 2026" /><label for="ad1"><span class="big">June 13</span><span class="small">Friday · Show 01</span></label></div>
+                <div class="dp"><input type="radio" name="a_date" id="ad2" value="July 17, 2026" /><label for="ad2"><span class="big">July 17</span><span class="small">Thursday · Show 02</span></label></div>
+              </div>
+            </div>
+            <div class="field" style="margin-top:1.2rem;">
+              <label>Any other shows around these dates?</label>
+              <textarea name="a_other_shows" placeholder="Let us know if you have gigs around June 13 or July 17." style="min-height:70px;"></textarea>
+            </div>
+            <div class="field">
+              <label>Anything else?</label>
+              <textarea name="a_notes" placeholder="Rider needs, questions, whatever's on your mind."></textarea>
+            </div>
+          </div>
+
+          <div class="submit-row">
+            <button class="btn-submit" id="a-submit-btn" type="button" onclick="submitArtist()">Send It →</button>
+          </div>
+
+        </div>
+        <div class="success" id="a-success">
+          <div class="success-check">✓</div>
+          <div class="success-msg">We hear you.</div>
+          <div class="success-sub">We'll listen to your links and be in touch. Follow <a href="https://instagram.com/death2genres" target="_blank">@death2genres</a> for updates.</div>
+        </div>
+      </div>
+
+    </div><!-- /form-body -->
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="foot-logo">Death 2 Genres: Sunset Market — © 2026</div>
+    <div class="foot-links">
+      <a href="https://instagram.com/death2genres" target="_blank" class="foot-link">Instagram</a>
+      <a href="https://death2genres.com" target="_blank" class="foot-link">Website</a>
+      <a href="mailto:elcapitan@death2genres.com" class="foot-link">Contact</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/slideshow.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/artist-form.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,364 @@
+/* ============================================================
+   form.css — sidebar, fields, date picker, checkboxes,
+               submit button, success screen
+   ============================================================ */
+
+/* ── FORM LAYOUT ── */
+.form-wrap {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+}
+
+/* ── SIDEBAR ── */
+.form-aside {
+  padding: 3rem 2rem;
+  border-right: 1px solid var(--border);
+  position: sticky;
+  top: 52px;
+  align-self: start;
+  height: calc(100vh - 52px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--off);
+}
+
+.aside-title {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  line-height: 1;
+  margin-bottom: 1.8rem;
+}
+
+.aside-steps { display: flex; flex-direction: column; }
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-dark);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--mid);
+  text-transform: uppercase;
+}
+
+.step.on { color: var(--black); }
+
+.step.on .snum {
+  background: var(--black);
+  color: #fff;
+  border-color: var(--black);
+}
+
+.snum {
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--border-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  flex-shrink: 0;
+  color: var(--mid);
+}
+
+.aside-foot {
+  font-size: 10px;
+  color: var(--mid);
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+}
+
+.aside-foot a {
+  color: var(--black);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.aside-socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.aside-social {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border-dark);
+  padding-bottom: 1px;
+}
+
+/* ── FORM BODY ── */
+.form-body { padding: 3rem 3.5rem 5rem; }
+
+.fblock {
+  margin-bottom: 3.5rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.fblock:last-of-type { border-bottom: none; }
+
+.fblock-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.fnum {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  color: var(--border-dark);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.ftitle {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+/* ── GRID ── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* ── FIELDS ── */
+.field { margin-bottom: 1.1rem; }
+
+.field label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 7px;
+}
+
+.req { font-weight: 700; color: var(--black); }
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 11px 14px;
+  background: #fff;
+  border: 1px solid var(--border-dark);
+  color: var(--black);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s;
+  appearance: none;
+  border-radius: 0;
+}
+
+.field input::placeholder,
+.field textarea::placeholder { color: #bbb; }
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus { border-color: var(--black); }
+
+.field select option { background: #fff; }
+
+.field textarea { min-height: 90px; resize: vertical; }
+
+.field .hint {
+  font-size: 10px;
+  color: var(--mid);
+  margin-top: 5px;
+  letter-spacing: 0.05em;
+  font-style: italic;
+}
+
+.field-err {
+  border-color: #b00 !important;
+  border-width: 2px !important;
+}
+
+/* ── DATE RADIO PICKER ── */
+.date-picks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.dp { position: relative; }
+
+.dp input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.dp label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 72px;
+  padding: 0 16px;
+  border: 1px solid var(--border-dark);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  font-size: 13px;
+  letter-spacing: 0;
+  color: var(--black);
+  text-transform: none;
+}
+
+.dp label .big {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  display: block;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.dp label .small {
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mid);
+}
+
+.dp input:checked + label {
+  border-color: var(--black);
+  border-width: 2px;
+  background: var(--off);
+}
+
+.dp input:checked + label .small { color: var(--black); }
+
+/* ── CHECKBOXES ── */
+.checks { display: flex; flex-direction: column; gap: 8px; }
+
+.chk {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.chk:hover { border-color: var(--border-dark); background: var(--off); }
+.chk:has(input:checked) { border-color: var(--black); background: var(--off); }
+
+.chk input[type="checkbox"] {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  accent-color: var(--black);
+  cursor: pointer;
+}
+
+.chk span { font-size: 12px; line-height: 1.5; letter-spacing: 0.02em; }
+
+/* ── SUBMIT ── */
+.submit-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.btn-submit {
+  font-family: var(--font-display);
+  font-size: 19px;
+  letter-spacing: 0.14em;
+  background: var(--black);
+  color: #fff;
+  border: none;
+  padding: 15px 48px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 9px 100%, 0 calc(100% - 9px));
+}
+
+.btn-submit:hover    { opacity: 0.8; }
+.btn-submit:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* ── SUCCESS ── */
+.success {
+  display: none;
+  min-height: 70vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.success.show { display: flex; }
+
+.success-check {
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 14vw, 12rem);
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--black);
+}
+
+.success-msg {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 4rem);
+  letter-spacing: 0.05em;
+  margin: 0.75rem 0;
+}
+
+.success-sub {
+  font-size: 11px;
+  color: var(--mid);
+  letter-spacing: 0.08em;
+  max-width: 380px;
+  line-height: 2;
+}
+
+.success-sub a { color: var(--black); border-bottom: 1px solid var(--border-dark); }
+
+/* ── TYPE TOGGLE ── */
+.type-toggle {
+  display: flex;
+  gap: 0;
+  margin-bottom: 3rem;
+  border: 1px solid var(--border-dark);
+  width: fit-content;
+}
+
+.toggle-btn {
+  font-family: var(--font-display);
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  padding: 12px 36px;
+  border: none;
+  background: transparent;
+  color: var(--mid);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border-right: 1px solid var(--border-dark);
+}
+
+.toggle-btn:last-child { border-right: none; }
+
+.toggle-btn.active {
+  background: var(--black);
+  color: #fff;
+}
+
+.toggle-btn:not(.active):hover {
+  background: var(--off);
+  color: var(--black);
+}
