@@ -16,7 +16,7 @@
 
 .ticker-inner {
   display: inline-block;
-  animation: tick 22s linear infinite;
+  animation: tick 150s linear infinite;
 }
 
 @keyframes tick {
