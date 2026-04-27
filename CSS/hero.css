@@ -8,7 +8,7 @@
   height: 88vh;
   overflow: hidden;
   border-bottom: 1px solid var(--border);
-  background: linear-gradient(to right, black 23%, #f5f2ee 100%);
+  background: #8F8F8F;
 }
 /* ── SLIDESHOW ── */
 .slides {
@@ -54,7 +54,7 @@
 .hero-tag {
   font-size: 16px;
   letter-spacing: 0.08em;
-  color: #ffffff;
+  color: White;
   text-transform: uppercase;
   line-height: 1.8;
   max-width: 480px;
@@ -87,10 +87,11 @@
 }
 
 .hero-meta {
-  font-size: 12px;
-  color: white;
+  font-size: 15px;
+  color: White;
   letter-spacing: 0.1em;
   line-height: 2.2;
+  text-transform: uppercase;
   width: 50%;
 }
 
