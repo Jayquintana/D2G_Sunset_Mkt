@@ -47,9 +47,9 @@
 .step.on { color: var(--black); }
 
 .step.on .snum {
-  background: var(--black);
+  background: #a02b1f;
   color: #fff;
-  border-color: var(--black);
+  border-color: #a02b1f;
 }
 
 .snum {
@@ -150,7 +150,7 @@
 .field textarea {
   width: 100%;
   padding: 11px 14px;
-  background: #fff;
+  background: var(--white);
   border: 1px solid var(--border-dark);
   color: var(--black);
   font-family: var(--font-mono);
@@ -166,9 +166,9 @@
 
 .field input:focus,
 .field select:focus,
-.field textarea:focus { border-color: var(--black); }
+.field textarea:focus { border-color: #a02b1f; }
 
-.field select option { background: #fff; }
+.field select option { background: var(--white); }
 
 .field textarea { min-height: 90px; resize: vertical; }
 
@@ -233,12 +233,12 @@
 }
 
 .dp input:checked + label {
-  border-color: var(--black);
+  border-color: #a02b1f;
   border-width: 2px;
   background: var(--off);
 }
 
-.dp input:checked + label .small { color: var(--black); }
+.dp input:checked + label .small { color: #a02b1f; }
 
 /* ── CHECKBOXES ── */
 .checks { display: flex; flex-direction: column; gap: 8px; }
@@ -254,14 +254,14 @@
 }
 
 .chk:hover { border-color: var(--border-dark); background: var(--off); }
-.chk:has(input:checked) { border-color: var(--black); background: var(--off); }
+.chk:has(input:checked) { border-color: #a02b1f; background: var(--off); }
 
 .chk input[type="checkbox"] {
   width: 13px;
   height: 13px;
   flex-shrink: 0;
   margin-top: 2px;
-  accent-color: var(--black);
+  accent-color: #a02b1f;
   cursor: pointer;
 }
 
@@ -279,7 +279,7 @@
   font-family: var(--font-display);
   font-size: 19px;
   letter-spacing: 0.14em;
-  background: var(--black);
+  background: #a02b1f;
   color: #fff;
   border: none;
   padding: 15px 48px;
@@ -309,7 +309,7 @@
   font-size: clamp(5rem, 14vw, 12rem);
   line-height: 1;
   color: transparent;
-  -webkit-text-stroke: 1px var(--black);
+  -webkit-text-stroke: 1px #a02b1f;
 }
 
 .success-msg {
@@ -354,7 +354,7 @@
 .toggle-btn:last-child { border-right: none; }
 
 .toggle-btn.active {
-  background: var(--black);
+  background: #a02b1f;
   color: #fff;
 }
 
