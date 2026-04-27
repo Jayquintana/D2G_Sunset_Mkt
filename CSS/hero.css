@@ -8,7 +8,7 @@
   height: 88vh;
   overflow: hidden;
   border-bottom: 1px solid var(--border);
-  background: linear-gradient(to right, #4a4a4a 23%, #f5f2ee 100%);
+  background: linear-gradient(to right, black 23%, #f5f2ee 100%);
 }
 /* ── SLIDESHOW ── */
 .slides {
@@ -52,10 +52,11 @@
 }
 
 .hero-tag {
-  font-size: 10px;
+  font-size: 20px;
   letter-spacing: 0.2em;
-  color: rgba(255, 255, 255, 0.45);
+  color: white;
   text-transform: uppercase;
+  line-height: 2.2;
 }
 
 .hero-center {
@@ -85,10 +86,11 @@
 }
 
 .hero-meta {
-  font-size: 10px;
-  color: rgba(255, 255, 255, 0.45);
+  font-size: 12px;
+  color: white;
   letter-spacing: 0.1em;
   line-height: 2.2;
+  width: 50%;
 }
 
 /* ── CTA BUTTON ── */
@@ -97,7 +99,7 @@
   background: #fff;
   color: var(--black);
   font-family: var(--font-display);
-  font-size: 17px;
+  font-size: 20px;
   letter-spacing: 0.14em;
   padding: 13px 40px;
   border: none;

@@ -4,7 +4,7 @@
 
 /* ── TICKER ── */
 .ticker {
-  background: var(--black);
+  background: black;
   color: var(--white);
   font-family: var(--font-display);
   font-size: 12px;
