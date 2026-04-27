@@ -12,10 +12,6 @@
 }
 
 @media (max-width: 700px) {
-  /* Nav */
-  nav { padding: 1rem 1.5rem; }
-  .nav-logo { font-size: 11px; }
-
   /* Hero */
   .hero-content { padding: 2rem 1.5rem; }
   .hero-h1 { font-size: clamp(3.5rem, 14vw, 6rem); }

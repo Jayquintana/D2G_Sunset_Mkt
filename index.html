@@ -30,14 +30,15 @@
   </div>
 
   <!-- ── NAV ── -->
-  <nav>
-    <div class="nav-logo">DEATH 2 GENRES: SUNSET MARKET</div>
-    <div class="nav-links">
-      <a href="https://death2genres.com" target="_blank" class="nav-link">Website</a>
-      <a href="https://instagram.com/death2genres" target="_blank" class="nav-link">@death2genres</a>
-      <a class="nav-link" style="cursor:pointer;" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply →</a>
-    </div>
-  </nav>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Menu">&#9776;</button>
+
+  <!-- ── NAV MENU ── -->
+  <div class="nav-menu" id="nav-menu">
+    <a href="https://death2genres.com" target="_blank" class="nav-menu-link">Website</a>
+    <a href="https://instagram.com/death2genres" target="_blank" class="nav-menu-link">@death2genres</a>
+    <a class="nav-menu-link" onclick="closeNav(); document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply →</a>
+  </div>
+  <div class="nav-menu-overlay" id="nav-menu-overlay" onclick="closeNav()"></div>
 
   <!-- ── HERO ── -->
   <section class="hero">
@@ -324,6 +325,18 @@
   <script src="js/config.js"></script>
   <script src="js/form.js"></script>
   <script src="js/artist-form.js"></script>
+  <script>
+    function toggleNav() {
+      const open = document.getElementById('nav-menu').classList.toggle('open');
+      document.getElementById('nav-menu-overlay').classList.toggle('show', open);
+      document.getElementById('nav-hamburger').innerHTML = open ? '&#x2715;' : '&#9776;';
+    }
+    function closeNav() {
+      document.getElementById('nav-menu').classList.remove('open');
+      document.getElementById('nav-menu-overlay').classList.remove('show');
+      document.getElementById('nav-hamburger').innerHTML = '&#9776;';
+    }
+  </script>
 
 </body>
 </html>
