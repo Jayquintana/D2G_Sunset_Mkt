@@ -8,8 +8,8 @@
   height: 88vh;
   overflow: hidden;
   border-bottom: 1px solid var(--border);
+  background: linear-gradient(to right, #4a4a4a 23%, #f5f2ee 100%);
 }
-
 /* ── SLIDESHOW ── */
 .slides {
   position: absolute;
