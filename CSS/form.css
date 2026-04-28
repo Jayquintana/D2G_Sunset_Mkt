@@ -47,9 +47,9 @@
 .step.on { color: var(--black); }
 
 .step.on .snum {
-  background: #a02b1f;
+  background: #BB2916;
   color: #fff;
-  border-color: #a02b1f;
+  border-color: #BB2916;
 }
 
 .snum {
@@ -112,7 +112,7 @@
 .fnum {
   font-family: var(--font-display);
   font-size: 3.5rem;
-  color: var(--border-dark);
+  color: #D99807;
   line-height: 1;
   flex-shrink: 0;
 }
@@ -166,7 +166,7 @@
 
 .field input:focus,
 .field select:focus,
-.field textarea:focus { border-color: #a02b1f; }
+.field textarea:focus { border-color: #BB2916; }
 
 .field select option { background: var(--white); }
 
@@ -233,12 +233,12 @@
 }
 
 .dp input:checked + label {
-  border-color: #a02b1f;
+  border-color: #BB2916;
   border-width: 2px;
   background: var(--off);
 }
 
-.dp input:checked + label .small { color: #a02b1f; }
+.dp input:checked + label .small { color: #BB2916; }
 
 /* ── CHECKBOXES ── */
 .checks { display: flex; flex-direction: column; gap: 8px; }
@@ -254,14 +254,14 @@
 }
 
 .chk:hover { border-color: var(--border-dark); background: var(--off); }
-.chk:has(input:checked) { border-color: #a02b1f; background: var(--off); }
+.chk:has(input:checked) { border-color: #BB2916; background: var(--off); }
 
 .chk input[type="checkbox"] {
   width: 13px;
   height: 13px;
   flex-shrink: 0;
   margin-top: 2px;
-  accent-color: #a02b1f;
+  accent-color: #BB2916;
   cursor: pointer;
 }
 
@@ -279,7 +279,7 @@
   font-family: var(--font-display);
   font-size: 19px;
   letter-spacing: 0.14em;
-  background: #a02b1f;
+  background: #BB2916;
   color: #fff;
   border: none;
   padding: 15px 48px;
@@ -309,7 +309,7 @@
   font-size: clamp(5rem, 14vw, 12rem);
   line-height: 1;
   color: transparent;
-  -webkit-text-stroke: 1px #a02b1f;
+  -webkit-text-stroke: 1px #BB2916;
 }
 
 .success-msg {
@@ -354,7 +354,7 @@
 .toggle-btn:last-child { border-right: none; }
 
 .toggle-btn.active {
-  background: #a02b1f;
+  background: #BB2916;
   color: #fff;
 }
 
