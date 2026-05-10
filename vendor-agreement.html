@@ -152,21 +152,24 @@
 
             <div class="field">
               <label>Select Your Booth Size <span class="req">*</span></label>
+              <div class="spots-callout" id="spots-callout"></div>
               <div class="booth-picks">
                 <div class="bp">
-                  <input type="radio" name="booth_size" id="booth-small" value="Small (6x6 ft) — $40" />
+                  <input type="radio" name="booth_size" id="booth-small" value="Small (10x10 ft) — $50" />
                   <label for="booth-small">
                     <span class="bp-size">Small</span>
-                    <span class="bp-dims">6 × 6 ft</span>
-                    <span class="bp-price">$40</span>
+                    <span class="bp-dims">10 × 10 ft</span>
+                    <span class="bp-price">$50</span>
+                    <span class="bp-spots">15 spots available</span>
                   </label>
                 </div>
                 <div class="bp">
-                  <input type="radio" name="booth_size" id="booth-medium" value="Medium (10x10 ft) — $60" />
+                  <input type="radio" name="booth_size" id="booth-medium" value="Large (10x15 ft) — $70" />
                   <label for="booth-medium">
-                    <span class="bp-size">Medium</span>
-                    <span class="bp-dims">10 × 10 ft</span>
-                    <span class="bp-price">$60</span>
+                    <span class="bp-size">Large</span>
+                    <span class="bp-dims">10 × 15 ft</span>
+                    <span class="bp-price">$70</span>
+                    <span class="bp-spots">10 spots available</span>
                   </label>
                 </div>
               </div>
@@ -197,6 +200,26 @@
               <div class="total-amount" id="total-amount">—</div>
             </div>
             <input type="hidden" name="total_amount_due" id="total-hidden" value="" />
+
+            <div class="payment-callout">
+              <div class="payment-callout-head">Payment Instructions</div>
+              <div class="payment-row">
+                <span class="payment-lbl">Venmo</span>
+                <span class="payment-val">Send payment via Venmo to @jayvquintana &nbsp;·&nbsp; 303-588-0964</span>
+              </div>
+              <div class="payment-row">
+                <span class="payment-lbl">Amount</span>
+                <span class="payment-val" id="payment-amount">The total selected above in this agreement</span>
+              </div>
+              <div class="payment-row">
+                <span class="payment-lbl">Note</span>
+                <span class="payment-val" id="payment-note">Add a note with your business / vendor name</span>
+              </div>
+              <div class="payment-row">
+                <span class="payment-lbl">Confirmation</span>
+                <span class="payment-val">Reply to our email confirming your payment</span>
+              </div>
+            </div>
           </div>
 
           <!-- ════ 04 SETUP & BREAKDOWN ════ -->
@@ -232,9 +255,9 @@
             <div class="policy-block">
               <div class="policy-title">Payment Policy</div>
               <ul class="policy-list">
-                <li>Full payment due within 48 hours of receiving this agreement</li>
                 <li>Spot is not reserved until payment is confirmed</li>
-                <li>Payment via Venmo</li>
+                <li>Payment via Venmo to 303-588-0964 (jayvquintana)</li>
+                <li>Please include a note to the venmo payment with your vendor / business name.</li>
               </ul>
             </div>
 
@@ -242,7 +265,7 @@
               <div class="policy-title">Cancellation &amp; Refund Policy</div>
               <ul class="policy-list">
                 <li>All sales are final</li>
-                <li>No refunds within 14 days of the event (on or after May 30, 2026)</li>
+                <li>No refunds within 7 days of the event (on or after June 6th, 2026)</li>
                 <li>If Death 2 Genres cancels, full refund issued</li>
               </ul>
             </div>
