@@ -24,7 +24,8 @@ function closeNav() {
 })();
 
 // ── TOTAL CALCULATOR ──
-const BOOTH_PRICES = { 'booth-small': 40, 'booth-medium': 60 };
+const BOOTH_PRICES = { 'booth-small': 50, 'booth-medium': 70 };
+const BOOTH_SPOTS  = { 'booth-small': 15, 'booth-medium': 10 };
 let tableQty = 0;
 
 function updateTotal() {
@@ -45,19 +46,25 @@ function updateTotal() {
   const breakdownEl = document.getElementById('total-breakdown');
   const hiddenEl    = document.getElementById('total-hidden');
 
+  const paymentAmountEl = document.getElementById('payment-amount');
+
   if (base === 0) {
-    amountEl.textContent    = '—';
-    breakdownEl.textContent = 'Select a booth size to calculate';
-    hiddenEl.value          = '';
+    amountEl.textContent        = '—';
+    breakdownEl.textContent     = 'Select a booth size to calculate';
+    hiddenEl.value              = '';
+    paymentAmountEl.textContent = 'Select a booth size above';
+    paymentAmountEl.classList.remove('payment-amount--set');
     return;
   }
 
   const parts = [baseName + ' booth $' + base];
   if (tableQty > 0) parts.push('Tables ×' + tableQty + ' +$' + tableTotal);
 
-  amountEl.textContent    = '$' + total;
-  breakdownEl.textContent = parts.join(' + ');
-  hiddenEl.value          = '$' + total;
+  amountEl.textContent        = '$' + total;
+  breakdownEl.textContent     = parts.join(' + ');
+  hiddenEl.value              = '$' + total;
+  paymentAmountEl.textContent = '$' + total;
+  paymentAmountEl.classList.add('payment-amount--set');
 }
 
 // ── TABLE STEPPER ──
@@ -88,6 +95,10 @@ document.getElementById('table-minus').addEventListener('click', function () {
 document.querySelectorAll('input[name="booth_size"]').forEach(function (r) {
   r.addEventListener('change', function () {
     document.querySelectorAll('.bp label').forEach(function (el) { el.classList.remove('field-err'); });
+    const spots = BOOTH_SPOTS[this.id];
+    const callout = document.getElementById('spots-callout');
+    callout.textContent = 'There are ' + spots + ' spots left for this size.';
+    callout.classList.add('spots-callout--visible');
     updateTotal();
   });
 });
@@ -97,6 +108,11 @@ document.querySelectorAll('input[name="booth_size"]').forEach(function (r) {
   document.getElementById(id).addEventListener('input', function () {
     this.classList.remove('field-err');
   });
+});
+
+document.getElementById('business-name').addEventListener('input', function () {
+  const noteEl = document.getElementById('payment-note');
+  noteEl.textContent = this.value.trim() || 'Your business / vendor name';
 });
 
 document.getElementById('agree-checkbox').addEventListener('change', function () {
