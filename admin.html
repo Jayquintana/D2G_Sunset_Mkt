@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vendor Admin — D2G Sunset Market</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lexend+Giga:wght@400;700;900&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+
+  <div class="admin-header">
+    <div class="admin-header-title">Vendor <span>Admin</span></div>
+    <div class="admin-header-sub">Death 2 Genres: Sunset Market &nbsp;·&nbsp; June 13, 2026</div>
+    <div class="admin-stats" id="admin-stats"></div>
+  </div>
+
+  <!-- ── ADD VENDOR ── -->
+  <div class="add-panel">
+    <div class="add-panel-head">Add Vendor</div>
+    <div class="add-form">
+      <div class="add-row">
+        <input type="text" id="add-name" placeholder="Business / Vendor Name" autocomplete="off" />
+        <input type="email" id="add-email" placeholder="Email" autocomplete="off" />
+      </div>
+      <div class="add-row">
+        <select id="add-booth">
+          <option value="">— Booth Size —</option>
+          <option value="Small (10×10) — $50">Small (10×10) — $50</option>
+          <option value="Large (10×15) — $70">Large (10×15) — $70</option>
+        </select>
+        <input type="text" id="add-amount" placeholder="Amount Due (e.g. $65)" autocomplete="off" />
+        <button class="btn-add" id="btn-add" onclick="addVendor()">+ Add</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── VENDOR LIST ── -->
+  <div class="vendor-list" id="vendor-list"></div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
