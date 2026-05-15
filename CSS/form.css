@@ -240,6 +240,20 @@
 
 .dp input:checked + label .small { color: #BB2916; }
 
+.dp--closed {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 20px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.dp--closed .big { font-size: 1.1rem; font-weight: 700; text-decoration: line-through; }
+.dp--closed .small { font-size: 0.78rem; color: var(--muted, #888); }
+
 /* ── CHECKBOXES ── */
 .checks { display: flex; flex-direction: column; gap: 8px; }
 
