@@ -175,9 +175,12 @@
             <div class="field">
               <label>Which date(s)? <span class="req">*</span></label>
               <div class="date-picks" id="v-date-picks">
-                <div class="dp"><input type="radio" name="v_date" id="vd1" value="June 13, 2026" /><label for="vd1"><span class="big">June 13</span><span class="small">Saturday · Show 01</span></label></div>
-                <div class="dp"><input type="radio" name="v_date" id="vd2" value="July 17, 2026" /><label for="vd2"><span class="big">July 17</span><span class="small">Friday · Show 02</span></label></div>
-                <div class="dp"><input type="radio" name="v_date" id="vd3" value="Both Dates" /><label for="vd3"><span class="big">Both Dates</span><span class="small">June 13 &amp; July 17</span></label></div>
+                <div class="dp"><input type="radio" name="v_date" id="vd1" value="June 13, 2026" onchange="toggleFoodNote()" /><label for="vd1"><span class="big">June 13</span><span class="small">Saturday · Show 01</span></label></div>
+                <div class="dp"><input type="radio" name="v_date" id="vd2" value="July 17, 2026" onchange="toggleFoodNote()" /><label for="vd2"><span class="big">July 17</span><span class="small">Friday · Show 02</span></label></div>
+                <div class="dp"><input type="radio" name="v_date" id="vd3" value="Both Dates" onchange="toggleFoodNote()" /><label for="vd3"><span class="big">Both Dates</span><span class="small">June 13 &amp; July 17</span></label></div>
+              </div>
+              <div class="date-note" id="v-food-note" style="display:none;">
+                No food &amp; beverage vendors for June 13 — food vendors may apply for July 17 only.
               </div>
             </div>
             <div class="two-col" style="margin-top:1.2rem;">
@@ -334,6 +337,11 @@
       document.getElementById('nav-menu').classList.remove('open');
       document.getElementById('nav-menu-overlay').classList.remove('show');
       document.getElementById('nav-hamburger').innerHTML = '&#9776;';
+    }
+    function toggleFoodNote() {
+      const val = (document.querySelector('input[name="v_date"]:checked') || {}).value || '';
+      document.getElementById('v-food-note').style.display =
+        (val === 'June 13, 2026' || val === 'Both Dates') ? 'block' : 'none';
     }
   </script>
 
